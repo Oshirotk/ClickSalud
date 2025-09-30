@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos los Productos</title>
+   <title>Farmacia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">       <!-- estilos globales -->
+  <link rel="stylesheet" href="productos.css">  <!-- estilos solo para productos -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html"><h1 class="logo">ClickSalud</h1></a>
+    <nav class="button_categoria">
+      <ul><a href="index.html"><button class="button_1">Inicio</button></a></ul>
+      <ul><a href="productos.html"><button class="button_2">Productos</button></a></ul>
+      <ul><button class="button_3">Sobre nosotros</button></ul>
+      <ul><button class="button_4">Contactos</button></ul>
+    </nav>
+   <nav>
+  <a href="carrito.html" class="carrito-link">
+    <i class="bi bi-basket2"></i>
+    <span id="cart-count">0</span>
+  </a>
+</nav>
+  </header>
+
+  <!-- FILTROS precio-->
+  <section id="filtros">
+    <div class="filtro">
+      <label for="precio">Filtrar por precio</label>
+      <input type="range" id="precio" min="0" max="500" step="10" value="500" />
+      <p id="precio_valor">$0 - $500</p>
+    </div>
+<!-- FILTROS  referencias -->
+    <div class="filtro">
+  <label for="ordenar">Ordenar por</label>
+  <select id="ordenar">
+    <option value="relevance">Relevance</option>
+    <option value="nombre_az">Nombre, A a Z</option>
+    <option value="nombre_za">Nombre, Z a A</option>
+    <option value="precio_bajo">Precio, Bajo a Alto</option>
+    <option value="precio_alto">Precio, Alto a Bajo</option>
+  </select>
+</div>
+
+  </section>
+
+  <!-- TODOS LOS PRODUCTOS -->
+  <section id="seccion_productos">
+    <h1>Todos los Productos</h1>
+    <div id="contenedor_todos"></div>
+  </section>
+
+  <script src="main.js"></script>
+  <script>
+
+    // Mostrar valor del rango de precio dinámico
+    const precio = document.getElementById("precio");
+    const precioValor = document.getElementById("precio_valor");
+
+    precio.addEventListener("input", () => {
+      precioValor.textContent = `$0 - $${precio.value}`;
+    });
+  </script>
+</body>
+</html>

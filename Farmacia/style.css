@@ -1,0 +1,261 @@
+/* Reset general */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f2f2f2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.button_categoria {
+  display: flex;
+  gap: 20px;
+}
+
+.button_categoria ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button_categoria button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 5px;
+  transition: color 0.3s ease;
+}
+
+.button_categoria button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.button_categoria button:hover {
+  color: #007bff;
+}
+.button_categoria button:hover::after {
+  width: 100%;
+}
+
+header nav i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+header nav i:hover {
+  color: #007bff;
+}
+
+/* BACKGROUND */
+#background {
+  background-image: url("images/añe3.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.texto_inicio {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+}
+.botton_shop {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.botton_shop:hover {
+  background-color: #0056b3;
+}
+
+/* PRODUCTOS POPULARES */
+#productos_populares {
+  padding: 40px 20px;
+  background: #5C6370;   /* gris en toda la sección */
+  text-align: center;
+  color: #333;
+}
+
+#productos_populares h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #222;
+}
+
+#lista_productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+  gap: 40px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.producto {
+  background: none;   /* sin fondo */
+  border: none;       /* sin borde */
+  box-shadow: none;   /* sin sombra */
+  padding: 10px;
+  text-align: center;
+  width: 220px;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.producto h2 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #111;
+}
+
+.producto p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.producto .oferta {
+  text-decoration: line-through;
+  color: red;
+  font-size: 13px;
+}
+
+.producto button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #0056b3;
+}
+
+.ver-todos {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ver-todos button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745; /* verde */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.ver-todos button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+#nuevos_productos {
+  padding: 40px 20px;
+  background: #e0e0e0; /* gris claro */
+  text-align: center;
+  color: #333;
+}
+
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contenedor-carrusel {
+  display: flex;
+  overflow: hidden;   /* oculta lo que se sale */
+  gap: 20px;
+  width: 100%;
+}
+
+.contenedor-carrusel .producto {
+  flex: 0 0 calc(33.33% - 20px); /* 3 productos visibles */
+  text-align: center;
+}
+
+.contenedor-carrusel .producto img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Estilo de las flechas */
+.flecha {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.flecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.flecha.izquierda {
+  position: absolute;
+  left: -50px;
+}
+
+.flecha.derecha {
+  position: absolute;
+  right: -50px;
+}
+
+
+

@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fc;
+  color: #333;
+}
+
+header {
+  background: #cdd1d6;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.carrito-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+}
+
+.carrito-lista {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.carrito-lista table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.carrito-lista th {
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.carrito-lista td {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.producto-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.producto-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* === Control de cantidad (centrado) === */
+.cantidad-control {
+  display: flex;
+  justify-content: center;   /* 👉 centra horizontalmente */
+  align-items: center;       /* 👉 centra verticalmente */
+  gap: 8px;
+}
+
+.cantidad-control button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.cantidad-control button:hover {
+  background: #f0f0f0;
+}
+
+.cantidad-control input {
+  width: 50px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.eliminar {
+  color: red;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resumen {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.resumen h3 {
+  margin-top: 0;
+}
+
+.btn-comprar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  background: #218838;
+}
+
+.btn-vaciar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #6c757d;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-vaciar:hover {
+  background: #555;
+}
