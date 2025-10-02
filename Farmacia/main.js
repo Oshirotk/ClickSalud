@@ -216,12 +216,12 @@ if (detalleContainer) {
     detalleContainer.innerHTML = `
       <div class="detalle-card">
         <img src="${producto.imagen}" alt="${producto.nombre}">
-        <div class="detalle-info">
-          <h1>${producto.nombre}</h1>
-          <p><strong>Precio:</strong> S/ ${producto.precio}</p>
+        <div class="detalle-derecha">
+          <h1 class="titulo">${producto.nombre}</h1>
+          <p class="precio">S/ ${producto.precio}</p>
           ${producto.oferta ? `<p class="oferta">¡Este producto está en oferta!</p>` : ""}
-          <p>Lorem ipsum dolor sit amet, descripción del producto.</p>
-          <button id="btnAgregarDetalle" class="btn-comprar">Agregar al carrito</button>
+          <p id="descripcion-larga">Lorem ipsum dolor sit amet, descripción del producto.</p>
+          <button id="btnAgregarDetalle" class="btn-carrito">Agregar al carrito</button>
         </div>
       </div>
     `;

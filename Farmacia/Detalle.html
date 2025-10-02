@@ -20,15 +20,92 @@
       <ul><button class="button_4">Contactos</button></ul>
     </nav>
     <nav>
-      <i class="bi bi-basket2"></i>
-    </nav>
+  <a href="carrito.html" class="carrito-link">
+    <i class="bi bi-basket2"></i>
+    <span id="cart-count">0</span>
+  </a>
+</nav>
   </header>
 
   <!-- DETALLE DEL PRODUCTO -->
-  <section id="detalle_producto">
-    <div id="detalle"></div>
+
+  
+  <section id="detalle_producto" class="detalle-contenedor">
+    <div id="detalle" class="detalle-izquierda"></div>
+    <div class="miniaturas">
+      <img src="img/prod1.jpg" alt="Vista 1">
+      <img src="img/prod2.jpg" alt="Vista 2">
+      <img src="img/prod3.jpg" alt="Vista 3">
+    </div>
+     <!-- Productos relacionados -->
+<section id="relacionados">
+  <h2>Comprados juntos habitualmente</h2>
+  <div class="productos-relacionados">
+    <div class="card-relacionado">
+      <img src="img/prod-rel1.jpg" alt="">
+      <p>Producto relacionado 1</p>
+      <span>S/ 20.00</span>
+      <button>Agregar al carrito</button>
+    </div>
+    <div class="card-relacionado">
+      <img src="img/prod-rel2.jpg" alt="">
+      <p>Producto relacionado 2</p>
+      <span>S/ 35.00</span>
+      <button>Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+
+
+    <ul class="caracteristicas">
+      <li>✔ Característica 1</li>
+      <li>✔ Característica 2</li>
+      <li>✔ Característica 3</li>
+    </ul>
   </section>
+  
 
   <script src="main.js"></script>
+
+      <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-logo">
+        <h2>ClickSalud</h2>
+        <p>Tu farmacia online de confianza</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Contactos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contacto">
+        <h3>Contáctanos</h3>
+        <p><i class="bi bi-telephone"></i> +51 987 654 321</p>
+        <p><i class="bi bi-envelope"></i> contacto@clicksalud.com</p>
+      </div>
+
+      <div class="footer-redes">
+        <h3>Síguenos</h3>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2025 ClickSalud - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+
+
 </body>
 </html>
