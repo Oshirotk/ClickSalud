@@ -256,7 +256,211 @@ header nav i:hover {
   position: absolute;
   right: -50px;
 }
+.cart-login-nav {
+    display: flex;
+    align-items: center;
+}
 
+.cart-login-nav .carrito-link {
+    margin-right: 20px; 
+}
+
+.cart-login-nav .login-link button {
+padding: 8px 12px;        /* mismo tamaño */
+    font-size: 14px;           /* mismo tamaño de texto */
+    border-radius: 5px;        /* mismos bordes redondeados */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-left: 15px;         /* mismo margen para separar del carrito */
+}
+
+.cart-login-nav .login-link button:hover {
+    background-color: #31d2f2; /* celeste más claro al pasar mouse */
+    transform: translateY(-1px);
+}
+/* LOGIN MEJORADO CON LOGO */
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-image: url("images/añe3.png"); /* mismo fondo de la web */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+}
+
+/* Logo ClickSalud arriba del formulario */
+.login-section .logo-login {
+  display: block;
+  margin-bottom: 25px;
+  width: 160px; /* ajusta tamaño según tu logo */
+  cursor: pointer;
+}
+
+/* Título principal */
+.login-section h1 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 32px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Subtítulos de secciones */
+.login-section h2 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #007bff;
+  font-size: 24px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Contenedor del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 450px;
+  background: rgba(255,255,255,0.95); /* semi-transparente */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.login-form:hover {
+  transform: translateY(-3px);
+}
+
+/* Inputs, selects y textarea */
+.login-form input,
+.login-form select,
+.login-form textarea {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus,
+.login-form select:focus,
+.login-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+/* Textarea */
+.login-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Checkboxes */
+.login-form label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Botón azul principal */
+.login-form button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Enlace de términos y contraseña olvidada */
+.login-form a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .login-section h1 {
+    font-size: 28px;
+  }
+
+  .login-section h2 {
+    font-size: 20px;
+  }
+
+  .login-section .logo-login {
+    width: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .login-section h1 {
+    font-size: 24px;
+  }
+
+  .login-section h2 {
+    font-size: 18px;
+  }
+
+  .login-section .logo-login {
+    width: 120px;
+  }
+}
+/* Estilo para el saludo y cerrar sesión */
+#user-greeting {
+  margin-right: 20px; /* separa del carrito */
+  font-weight: bold;
+  color: #007bff; /* azul consistente con tus botones */
+}
+
+#logout-btn {
+    padding: 8px 12px;        /* mismo tamaño que iniciar sesión */
+    font-size: 14px;           /* mismo tamaño de texto */
+    border-radius: 5px;        /* mismos bordes redondeados */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-left: 15px;         /* separación del carrito */
+    background-color: #dc3545; /* rojo */
+    color: white;
+}
+
+#logout-btn:hover {
+    background-color: #b02a37; /* rojo más oscuro al pasar mouse */
+    transform: translateY(-1px);
+}
 
 
 /* Contenedor principal */
