@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - ClickSalud</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Tu CSS global -->
+
+  <style>
+    /* ===== SOBRE NOSOTROS ===== */
+    body {
+      background: #f0f2f5; /* fondo general */
+    }
+
+    .about-background {
+      background-image: url('image/fondo-about.jpg'); /* la imagen de fondo de siempre */
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px 60px 20px;
+      text-align: center;
+      color: rgba(4, 127, 241, 0.582);
+    }
+.about-background h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #00aaff; /* color del título */
+}
+
+.about-background p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #00aaff; /* color del párrafo */
+}
+
+    /* FUNDADORES */
+    .fundadores {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin: 60px 20px;
+    }
+
+    .fundador {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .fundador img {
+      width: 100%;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .fundador:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .fundador h3 {
+      margin-top: 15px;
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    .fundador p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* COMENTARIOS DE CLIENTES */
+    .comentarios {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 60px 20px;
+    }
+
+    .comentario {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .comentario:hover {
+      transform: translateY(-5px);
+    }
+
+    .comentario img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .comentario h4 {
+      font-size: 16px;
+      color: #007bff;
+      margin-bottom: 5px;
+    }
+
+    .comentario p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* VISIÓN, MISIÓN Y VALORES */
+    .vision-mision {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card-vision {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex: 1 1 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card-vision:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-vision h3 {
+      color: #1a4a7a;
+      margin-bottom: 15px;
+    }
+
+    .card-vision p {
+      color: #555;
+      font-size: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER igual que inicio -->
+  <header>
+    <a href="index.html"><h1 class="logo">ClickSalud</h1></a>
+    <nav class="button_categoria">
+      <ul><a href="index.html"><button class="button_1">Inicio</button></a></ul>
+      <ul><a href="productos.html"><button class="button_2">Productos</button></a></ul>
+      <ul><a href="sobre-nosotros.html"><button class="button_3">Sobre nosotros</button></a></ul>
+      <ul><a href="contacto.html"><button class="button_4">Contactos</button></a></ul>
+    </nav>
+    <nav class="cart-login-nav">
+      <span id="user-greeting"></span>
+      <a href="carrito.html" class="carrito-link">
+        <i class="bi bi-basket2"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a href="login.html" class="login-link" id="login-link" style="display:none;">
+        <button class="button_login">Iniciar Sesión</button>
+      </a>
+      <a href="#" id="logout-btn" style="display:none;">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- FONDO + Intro -->
+<section class="about-background">
+  <h1>Sobre ClickSalud</h1>
+  <p class="intro-text">
+    En ClickSalud nos apasiona brindar productos de salud confiables y un servicio excepcional a nuestros clientes.
+  </p>
+</section>
+
+  <!-- FUNDADORES -->
+  <h2 style="text-align:center; margin-top:50px;">Nuestros Fundadores</h2>
+  <div class="fundadores">
+    <div class="fundador">
+      <img src="image/XD1.jpg" alt="Reynaldo">
+      <h3>Reynaldo</h3>
+      <p>Especialista en farmacia clínica y fundador de ClickSalud.</p>
+    </div>
+    <div class="fundador">
+      <img src="image/XD1.jpg" alt="Victor">
+      <h3>Victor</h3>
+      <p>Experto en gestión de productos farmacéuticos y cofundador.</p>
+    </div>
+    <div class="fundador">
+      <img src="image/XD1.jpg" alt="Oshiro">
+      <h3>Oshiro</h3>
+      <p>Encargado de la atención al cliente y cofundador de ClickSalud.</p>
+    </div>
+  </div>
+
+  <!-- COMENTARIOS -->
+  <h2 style="text-align:center; margin-top:50px;">Lo que dicen nuestros clientes</h2>
+  <div class="comentarios">
+    <div class="comentario">
+      <img src="image/XD2.jpg" alt="Cliente1">
+      <h4>Lucía P.</h4>
+      <p>Excelente atención y productos de calidad. ¡Recomendado!</p>
+    </div>
+    <div class="comentario">
+      <img src="image/person_3.jpg" alt="Cliente2">
+      <h4>Carlos M.</h4>
+      <p>Me gusta la variedad y la rapidez en la entrega de mis pedidos.</p>
+    </div>
+    <div class="comentario">
+      <img src="image/person_4.jpg" alt="Cliente3">
+      <h4>Andrea R.</h4>
+      <p>Confío plenamente en sus productos y el servicio es muy profesional.</p>
+    </div>
+  </div>
+
+  <!-- VISIÓN, MISIÓN Y VALORES -->
+  <section class="vision-mision">
+    <div class="card-vision">
+      <h3>Visión</h3>
+      <p>Ser la farmacia online más confiable y cercana a nuestros clientes en todo el país.</p>
+    </div>
+    <div class="card-vision">
+      <h3>Misión</h3>
+      <p>Ofrecer productos de salud confiables, con asesoría profesional y entrega rápida a domicilio.</p>
+    </div>
+    <div class="card-vision">
+      <h3>Valores</h3>
+      <p>Confianza, responsabilidad, excelencia y cercanía con el cliente.</p>
+    </div>
+  </section>
+
+ <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-contenedor">
+    <div class="footer-logo">
+      <h2>ClickSalud</h2>
+      <p>Tu farmacia online de confianza</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Enlaces rápidos</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="contacto.html">Contactos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h3>Contáctanos</h3>
+      <p><i class="bi bi-telephone"></i> +51 987 654 321</p>
+      <p><i class="bi bi-envelope"></i> contacto@clicksalud.com</p>
+    </div>
+
+    <div class="footer-redes">
+      <h3>Síguenos</h3>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 ClickSalud - Todos los derechos reservados</p>
+  </div>
+</footer>

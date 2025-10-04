@@ -96,4 +96,16 @@
     </div>
   </footer>
 </body>
+<script>
+  // BOTON IR A COMPRAR FUNCIONAL
+  document.getElementById("comprar").addEventListener("click", () => {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    if(carrito.length === 0){
+      alert("El carrito está vacío");
+      return;
+    }
+    // Redirige al checkout
+    window.location.href = "checkout.html";
+  });
+</script>
 </html>
