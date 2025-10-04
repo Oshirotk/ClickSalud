@@ -23,21 +23,17 @@
 
     <!-- NAV con saludo, carrito y cerrar sesión -->
     <nav class="cart-login-nav">
-      <!-- Saludo al usuario -->
       <span id="user-greeting"></span>
 
-      <!-- Carrito de compras -->
       <a href="carrito.html" class="carrito-link">
         <i class="bi bi-basket2"></i>
         <span id="cart-count">0</span>
       </a>
 
-      <!-- Botón iniciar sesión (se oculta si ya hay usuario) -->
       <a href="login.html" class="login-link" id="login-link">
         <button class="button_login">Iniciar Sesión</button>
       </a>
 
-      <!-- Botón cerrar sesión -->
       <a href="#" id="logout-btn" style="display:none;">Cerrar Sesión</a>
     </nav>
   </header>
@@ -57,6 +53,7 @@
     </div>
   </section>
 
+  <!-- NUEVOS PRODUCTOS -->
   <section id="nuevos_productos">
     <h1>Nuevos Productos</h1>
     <div class="carrusel">
@@ -66,7 +63,7 @@
     </div>
   </section>
 
-      <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-contenedor">
       <div class="footer-logo">
@@ -103,15 +100,13 @@
     </div>
   </footer>
 
-
   <!-- MAIN JS -->
   <script src="main.js"></script>
 
   <!-- SCRIPT DE SESIÓN -->
   <script>
-    // Mostrar usuario al cargar la página
     function showUser() {
-        const user = localStorage.getItem("usuario"); // nombre guardado en login
+        const user = localStorage.getItem("usuario");
         const greeting = document.getElementById("user-greeting");
         const logoutBtn = document.getElementById("logout-btn");
         const loginLink = document.getElementById("login-link");
@@ -119,62 +114,22 @@
         if(user) {
             greeting.textContent = `Hola, ${user}`;
             logoutBtn.style.display = "inline-block";
-            loginLink.style.display = "none"; // ocultar botón iniciar sesión
+            loginLink.style.display = "none";
         } else {
             greeting.textContent = "";
             logoutBtn.style.display = "none";
-            loginLink.style.display = "inline-block"; // mostrar iniciar sesión
+            loginLink.style.display = "inline-block";
         }
     }
 
-    // Cerrar sesión
     document.getElementById("logout-btn").addEventListener("click", function(e){
         e.preventDefault();
         localStorage.removeItem("usuario");
         showUser();
     });
 
-    // Ejecutar al cargar la página
     document.addEventListener("DOMContentLoaded", showUser);
   </script>
-
-    <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-contenedor">
-      <div class="footer-logo">
-        <h2>ClickSalud</h2>
-        <p>Tu farmacia online de confianza</p>
-      </div>
-
-      <div class="footer-links">
-        <h3>Enlaces rápidos</h3>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="#">Sobre nosotros</a></li>
-          <li><a href="#">Contactos</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contacto">
-        <h3>Contáctanos</h3>
-        <p><i class="bi bi-telephone"></i> +51 987 654 321</p>
-        <p><i class="bi bi-envelope"></i> contacto@clicksalud.com</p>
-      </div>
-
-      <div class="footer-redes">
-        <h3>Síguenos</h3>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-copy">
-      <p>&copy; 2025 ClickSalud - Todos los derechos reservados</p>
-    </div>
-  </footer>
- 
 
 </body>
 </html>
